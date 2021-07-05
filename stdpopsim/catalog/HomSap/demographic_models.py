@@ -423,8 +423,8 @@ def _america():
 _species.add_demographic_model(_america())
 
 
-def _ooa_archaic():
-    id = "OutOfAfricaArchaicAdmixture_5R19"
+def _ooa_archaic_no_mig():
+    id = "OutOfAfricaArchaicAdmixture_5R19_nom"
     description = "Three population out-of-Africa with archaic admixture"
     long_description = """
         The three population out-of-African model popularized by Gutenkunst et al. (2009)
@@ -489,8 +489,14 @@ def _ooa_archaic():
 
     # Migration rates during the various epochs.
     m_AF_B = 52.2e-5
-    m_YRI_CEU = 2.48e-5
-    m_YRI_CHB = 0e-5
+
+    # ----- 
+    # 5/7/21
+    # I changed this to be 0 in this model
+    m_YRI_CEU = 0
+    m_YRI_CHB = 0
+    # -----
+
     m_CEU_CHB = 11.3e-5
     m_AF_arch_af = 1.98e-5
     m_OOA_nean = 0.825e-5
@@ -596,7 +602,7 @@ def _ooa_archaic():
     )
 
 
-_species.add_demographic_model(_ooa_archaic())
+_species.add_demographic_model(_ooa_archaic_no_mig())
 
 
 def _zigzag():
