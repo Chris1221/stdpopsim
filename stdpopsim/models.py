@@ -204,7 +204,7 @@ class DemographicModel:
                         num_samples=n,
                         population=pop_index,
                         time=self.populations[pop_index].default_sampling_time,
-                        ploidy=1,  # Avoid breaking too much at once.
+                        ploidy=2,  # Avoid breaking too much at once.
                     )
                 )
             elif n > 0:
