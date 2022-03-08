@@ -650,7 +650,7 @@ def _ooa_archaic_mig():
     # calibration of this demographic model used the recombination instead of mutation
     # rate - as such, levels of diversity using the species default rate may not match
     # expectations or observations in human data
-    mutation_rate = None
+    mutation_rate = 1.25e-8
 
     T_AF = 300e3 / generation_time
     T_B = 60.7e3 / generation_time
@@ -668,7 +668,9 @@ def _ooa_archaic_mig():
     N_CHB = N_CHB0 / math.exp(-r_CHB * T_EU_AS)
 
     # Migration rates during the various epochs.
-    m_AF_B = 52.2e-5
+    #m_AF_B = 52.2e-5
+    # boosted this by a LOT 
+    m_AF_B = 52.2e-3
 
     # ----- 
     # 5/7/21
@@ -683,7 +685,7 @@ def _ooa_archaic_mig():
     # -----
 
     m_CEU_CHB = 11.3e-5
-    m_AF_arch_af = 1.98e-5
+    m_AF_arch_af = 0
     m_OOA_nean = 0.825e-5
 
     # Population IDs correspond to their indexes in the population
@@ -836,7 +838,7 @@ def _ooa_archaic_no_mig():
     # calibration of this demographic model used the recombination instead of mutation
     # rate - as such, levels of diversity using the species default rate may not match
     # expectations or observations in human data
-    mutation_rate = None
+    mutation_rate = 1.25e-8
 
     T_AF = 300e3 / generation_time
     T_B = 60.7e3 / generation_time
@@ -854,7 +856,7 @@ def _ooa_archaic_no_mig():
     N_CHB = N_CHB0 / math.exp(-r_CHB * T_EU_AS)
 
     # Migration rates during the various epochs.
-    m_AF_B = 52.2e-5
+    m_AF_B = 0
 
     # ----- 
     # 5/7/21
@@ -868,7 +870,7 @@ def _ooa_archaic_no_mig():
     # -----
 
     m_CEU_CHB = 11.3e-5
-    m_AF_arch_af = 1.98e-5
+    m_AF_arch_af = 0
     m_OOA_nean = 0.825e-5
 
     # Population IDs correspond to their indexes in the population
