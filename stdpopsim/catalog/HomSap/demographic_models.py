@@ -673,6 +673,11 @@ def _ooa_archaic_mig():
     # ----- 
     # 5/7/21
     # I changed this to be non 0 in this model
+
+    # 07/03/22
+    # Again this is actually
+    # the wrong time period since it is
+    # only after the population splits. 
     m_YRI_CEU = 1e-4
     m_YRI_CHB = 0
     # -----
@@ -854,6 +859,10 @@ def _ooa_archaic_no_mig():
     # ----- 
     # 5/7/21
     # I changed this to be 0 in this model
+
+    # 07/0/22
+    # What about the early split population? That's where 
+    # we need to have no migration. this is too late to matter?
     m_YRI_CEU = 0
     m_YRI_CHB = 0
     # -----
